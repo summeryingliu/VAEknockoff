@@ -14,7 +14,7 @@ The code
 The simulation in linear and logistic lasso regression for FDR control is written in R.
 
 ## Tutorial
-### To use the main class for VAE knockoff generator in vae_plain, the VAE Class incoorperate flexible user defined layers for decoder and endocer. to initiate provide:
+#### To use the main class for VAE knockoff generator in vae_plain.py, the VAE Class incoorperate flexible user defined layers for decoder and endocer. to initiate provide:
 
 ##### X_dim
 Dimension for X
@@ -33,14 +33,19 @@ import numpy as np
 import torch.nn as nn
 from vae_plain import VAE
 from scipy.linalg import cholesky
+from scipy.stats import norm
 bin=0
 n_epoch = 30
 p = 100
 m = 200
 mb_size = 25  # training batch size
-
-m=100
-p=50
+SIGMA = 0.1*np.ones([p,p])
+np.fill_diagonal(SIGMA, 1)
+C = cholesky(SIGMA, lower=True)
+nhin=[100]
+nout=[100]
+zdim=50
+X_dim=p
 
 X = norm.rvs(size=(m, p))
 X_tr = (X.dot(C) > 0) * 1.
@@ -71,9 +76,10 @@ for epoch in range(1,n_epoch):
     
     
 ```
-#### To try some simulation settings in our paper
-cd path/to/transimu.py 
+#### To try some simulation settings in our paper, trainsimu.py contains several settings. After change some path to your local path, you can call this function in terminal as following.
 
+```cd path/to/transimu.py 
 python trainsimu.py 6 Xka zdim=100 nhin=[100] nhout=[100] m=100 p=50 n_epoch=50
-
+```
+The path need to contains folder 
 ### License

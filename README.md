@@ -11,7 +11,24 @@ The code
 - pytorch=
 - numpy=
 
-The simulation in linear and logistic lasso regression for FDR control is written in R.
+The simulation in linear and logistic lasso regression for FDR control is written in R. 
+The code depend on the developmental version Knockoff package. Can be installed by
+library(devtools)
+install_bitbucket("msesia/knockoff-filter/R/knockoff")
+
+And see more about the package on
+https://bitbucket.org/msesia/knockoff-filter/src/244717fba527551e4a421ef4332466065b1dd905/R/README.md?fileviewer=file-view-default
+
+We also provide an customized version of code to that has slight change from the function in this R package.
+#### lassostat.R
+contains the function lassostat compute the signed max lambda stat. 
+#### DeepFDR.R 
+contains the function process all the X and Xknock csv files in one folder of the each setting.
+It simulate outcome $Y$ from linear, logistic or time-to-event. 
+The FDR of three knockoffs in the paper were computed and saved into a csv file.
+
+The execute.R file calls the above three R files and compute FDR for various number of signals and magnitude of signals
+The summary.R will summarize the output csv file from the excute and FDRplot_code produce the plots.
 
 ## Tutorial
 #### To use the main class for VAE knockoff generator in vae_plain.py, the VAE Class incoorperate flexible user defined layers for decoder and endocer. to initiate provide:

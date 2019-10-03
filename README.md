@@ -6,10 +6,10 @@ Accompanying paper: https://arxiv.org/abs/1809.10765
 
 ### Software dependencies.
 The knockoff generator is writen in python with dependency in pytorch. 
-The code 
-- python=3.6.5
-- pytorch=
-- numpy=
+- python=3.6.8
+- pytorch=1.0.1
+- numpy=1.16.1
+- scipy=1.2.1
 
 The simulation in linear and logistic lasso regression for FDR control is written in R. 
 The code depend on the developmental version Knockoff package. Can be installed by

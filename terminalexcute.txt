@@ -1,0 +1,84 @@
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/
+python trainsimu.py 1 Xka zdim=50 nhin=[] nhout=[]
+python trainsimu.py 1 Xkb zdim=200 nhin=[150] nhout=[150]
+python trainsimu.py 1 Xkc zdim=200 nhin=[200,200] nhout=[200,200]
+python trainsimu.py 1 Xkd zdim=200 nhin=[] nhout=[]
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting1 ts=20 namek=c('Xka','Xkb','Xkc','Xkd')
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting1 ts=10 namek=c('Xka','Xkb','Xkc','Xkd')
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting1 ts=20 fam='binomial' namek=c('Xka','Xkb','Xkc','Xkd')
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting1 ts=10 fam='binomial' namek=c('Xka','Xkb','Xkc','Xkd')
+
+
+
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/
+python trainsimu.py 2 Xka zdim=10 nhin=[] nhout=[] m=100 p=50 n_epoch=50
+
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/
+python trainsimu.py 2 Xkb zdim=50 nhin=[50] nhout=[50] m=100 p=50 n_epoch=50
+
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting2 ts=30 namek=c('Xka','Xkb') rhoc=c(0.5,1,2,5,10)
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting2 ts=40 namek=c('Xka','Xkb') rhoc=c(0.5,1,2,5,10)
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting2 ts=30 fam='binomial' namek=c('Xka','Xkb') rhoc=c(0.5,1,2,5,10)
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting2 ts=40 fam='binomial' namek=c('Xka','Xkb') rhoc=c(0.5,1,2,5,10)
+
+
+
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/
+python trainsimu.py 3 Xk zdim=100 nhin=[100] nhout=[100]
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting3 ts=40 namek=c('Xk') rhoc=c(0.5,1,2,5,10)
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting3 ts=10 namek=c('Xk') rhoc=c(0.5,1,2,5,10)
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting3 ts=40 fdr=0.1 fam='binomial' namek=c('Xk') rhoc=c(0.5,1,2,5,10)
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting3 ts=10 fdr=0.1 fam='binomial' namek=c('Xk') rhoc=c(0.5,1,2,5,10)
+
+
+
+
+python trainsimu.py 3 Xkb zdim=50 nhin=[10] nhout=[10]
+python trainsimu.py 3 Xkc zdim=200 nhin=[200,200] nhout=[200,200]
+python trainsimu.py 3 Xkd zdim=200 nhin=[] nhout=[]
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting3 ts=20 namek=c('Xka','Xkb','Xkc','Xkd')
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting3 ts=10 namek=c('Xka','Xkb','Xkc','Xkd')
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting3 ts=20 fam='binomial' namek=c('Xka','Xkb','Xkc','Xkd')
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting3 ts=10 fam='binomial' namek=c('Xka','Xkb','Xkc','Xkd')
+
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/
+python trainsimu.py 4 Xka zdim=50 nhin=[] nhout=[]
+python trainsimu.py 4 Xkb zdim=200 nhin=[150] nhout=[150]
+python trainsimu.py 4 Xkc zdim=200 nhin=[200,200] nhout=[200,200]
+python trainsimu.py 4 Xkd zdim=200 nhin=[] nhout=[]
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting4 ts=20 namek=c('Xka','Xkb','Xkc','Xkd')
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting4 ts=10 namek=c('Xka','Xkb','Xkc','Xkd')
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting4 ts=20 fam='binomial' namek=c('Xka','Xkb','Xkc','Xkd')
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting4 ts=10 fam='binomial' namek=c('Xka','Xkb','Xkc','Xkd')
+
+
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/
+python trainsimu.py 6 Xka zdim=10 nhin=[] nhout=[] m=100 p=50 n_epoch=200
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/
+python trainsimu.py 6 Xkb zdim=100 nhin=[100] nhout=[100] m=100 p=50 n_epoch=200
+
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting6 ts=10 namek=c('Xka','Xkb') rhoc=c(1,2,5,10)
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting6 ts=30 namek=c('Xka','Xkb') rhoc=c(1,2,5,10)
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting6 ts=10 fam='binomial' namek=c('Xka','Xkb') rhoc=c(1,2,5,10)
+cd C:/Users/"Ying Liu"/PycharmProjects/latent/Rcode/
+"C:/PROGRA~1/MIE74D~1/RCLIEN~1/R_SERVER/bin/x64/Rscript.exe" --vanilla batchexecute.R C:/Users/"Ying Liu"/PycharmProjects/latentoutput/setting6 ts=30 fam='binomial' namek=c('Xka','Xkb') rhoc=c(1,2,5,10)
+
+
+
+
+
+
